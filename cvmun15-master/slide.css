@@ -1,0 +1,108 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+
+figure { 
+	display: inline-block; 
+}
+
+#slideshow {
+	z-index: -1
+	position:absolute;
+	width: 640px;
+	height: 310px;
+}
+
+
+#slideshow .container {
+	position:relative;
+	width: 640px;
+	height: 310px;
+	overflow: hidden;
+}
+
+
+@-webkit-keyframes slider {
+	0%, 20%, 100%	{ left: 0 }
+	25%, 45%		{ left: -100% }
+	50%, 70%		{ left: -200% }
+	75%, 95%		{ left: -300% }
+}
+@-moz-keyframes slider {
+	0%, 20%, 100%	{ left: 0 }
+	25%, 45%		{ left: -100% }
+	50%, 70%		{ left: -200% }
+	75%, 95%		{ left: -300% }
+}
+@keyframes slider {
+	0%, 20%, 100%	{ left: 0 }
+	25%, 45%		{ left: -100% }
+	50%, 70%		{ left: -200% }
+	75%, 95%		{ left: -300% }
+}
+
+#slideshow .slider {
+	position: absolute;
+	left:0; top:0;
+	width: 400%;
+	height: 310px;
+	
+	-webkit-animation: slider 24s infinite;
+	-moz-animation: slider 24s infinite;
+	animation: slider 24s infinite;
+}
+
+#slideshow .c_slider {
+	
+	position: absolute;
+	left:0; top:0;
+	width: 400%;
+	height: 310px;
+	background: url(img/dummy-640x310-1.jpg) 0 0 no-repeat, url(img/dummy-640x310-2.jpg) 640px 0 no-repeat, url(img/dummy-640x310-3.jpg) 1280px 0 no-repeat, url(img/dummy-640x310-4.jpg) 1920px 0 no-repeat;
+}
+.sl_i:target ~ #slideshow .c_slider {
+	-webkit-transition: background 1s;
+	-moz-transition: background 1s;
+	transition: background 1s;
+}
+
+#slideshow figure {
+	position:relative;
+	padding:0; margin:0;
+}
+
+@-webkit-keyframes figcaptionner {
+	0%, 25%, 50%, 75%, 100%						{ bottom: -55px;	}
+	5%, 20%, 30%, 45%, 55%, 70%, 80%, 95%		{ bottom: 5px;		}
+}
+@-moz-keyframes figcaptionner {
+	0%, 25%, 50%, 75%, 100%						{ bottom: -55px;	}
+	5%, 20%, 30%, 45%, 55%, 70%, 80%, 95%		{ bottom: 5px;		}
+}
+@keyframes figcaptionner {
+	0%, 25%, 50%, 75%, 100%						{ bottom: -55px;	}
+	5%, 20%, 30%, 45%, 55%, 70%, 80%, 95%		{ bottom: 5px;		}
+}
+
+#slideshow figcaption {
+	position:absolute;
+	padding: 20px 20px; margin:0;
+	left:0; right:0; bottom: 5px;
+	text-align:center;
+	font-family: 'Roboto Slab', serif; 
+	background: #000;
+	background: rgba(255,255,255,0.7);
+	color: #555;
+	
+	-webkit-animation: figcaptionner 24s infinite;
+	-moz-animation: figcaptionner 24s infinite;
+	animation: figcaptionner 24s infinite;
+}
+
+figcaption > a {
+text-decoration: none;
+color: black;
+font-size: 16;
+}
+
+figcaption > a:hover {
+text-decoration: underline;
+}

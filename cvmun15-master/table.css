@@ -1,0 +1,30 @@
+#topimg {
+height: 180px;
+width: 180px;
+transition: opacity 0.3s;
+}
+
+#topimg:hover {
+opacity: 0.2;
+}
+
+
+
+#downtext {
+height: 180px;
+width: 180px;
+background-color: black;
+font-family: 'Roboto Slab', serif;  
+color: white;
+font-size: 20;
+vertical-align: top;
+text-align: right;
+}
+
+table {
+border-collapse:collapse;
+}
+
+td {
+text-align: center;
+}
